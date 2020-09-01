@@ -96,7 +96,7 @@ def predict(img_dir, model, topk, gpu_mode):
         pass
     
     # Find probablities
-    logps = model.forward(torch_image_tensor)
+    logps = model.forward(torch_image)
     linear_ps = torch.exp(logps)
     
     # Top 5 results
